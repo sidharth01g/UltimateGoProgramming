@@ -19,9 +19,9 @@ Every variable in Go must be initialized. If the programmer does not do this, th
 
 # Strings
 
-Size: 2 words
-    Word 0: pointer to a backing array of bytes. Zero values = nil
-    Word 1: Size. Number of bytes. Zero value = 0
+**Size**: 2 words
+- Word 0: pointer to a backing array of bytes. Zero values = nil
+- Word 1: Size. Number of bytes. Zero value = 0
 
 ## Example:
 ```go
