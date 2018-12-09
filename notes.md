@@ -76,3 +76,18 @@ type example struct {
 3. 48-55: bool
 
 > Total space: 56 bits = 7 bytes! (Space savings)
+
+# Pointers
+- Everything in Go is pass-by-value
+- Pointers == "sharing" between program boundaries (example: function calls)
+
+# Go routines
+- They are threads
+- They could have multiple functions within them
+- Each Go routine is allocated a stack
+- Every time a function is executed a portion of the stack is allocated to that function
+
+> *Note: Every stack in Go starts initially with a size of 2KB*
+
+Stacks in generally grow "downwards" (higher to lower addresses)
+![alt text](https://cdn.vox-cdn.com/thumbor/Pkmq1nm3skO0-j693JTMd7RL0Zk=/0x0:2012x1341/1200x800/filters:focal(0x0:2012x1341)/cdn.vox-cdn.com/uploads/chorus_image/image/47070706/google2.0.0.jpg)
