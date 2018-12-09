@@ -90,4 +90,6 @@ type example struct {
 > *Note: Every stack in Go starts initially with a size of 2KB*
 
 Stacks in generally grow "downwards" (higher to lower addresses)
-![alt text](https://cdn.vox-cdn.com/thumbor/Pkmq1nm3skO0-j693JTMd7RL0Zk=/0x0:2012x1341/1200x800/filters:focal(0x0:2012x1341)/cdn.vox-cdn.com/uploads/chorus_image/image/47070706/google2.0.0.jpg)
+![alt text](images/stack-0.jpeg)
+
+> *Note: The size of every stack is known at compile time. Anything whose size cannot be determined at compile time has to go to the heap and not to the stack*
