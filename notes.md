@@ -207,6 +207,15 @@ Depth:  10  s:  0xc000095f78
 - Every Go routine is instructed to start using the "write barrier".
 - The write barrier is a tiny function that causes each Go routine to scan its stack for pointers to addresses that are in the heap. Such pointers are called "Root objects". The values pointed to by these pointers are called "Root values"
 ![alt text](images/root-values-0.jpeg)
-- Every root value in the heap can be put into a queue
+- Every root value in the heap can be put into a queue (for BFS scanning??)
 - From the root values, connected components are computed and the other objects in the heap can be removed
 ![alt text](images/root-values-1.jpeg)
+- While the Go-routines "color" the heap objects, they are stalled lest the graph changes if they are allowed to keep running. Garbage collection in Go is so well designed that it takes no more than a microsecond typically
+
+# Constants
+- Go has implemented some novelty when it comes to constants
+- Constants exist as literal values ONLY during compile time
+- They are NOT implemented as read-only variables post compilation.
+- Constants in Go can have upto 256 bits of precision
+- Constants can be either typed or untyped
+- Untyped constant are considered to be of a "kind"
