@@ -219,3 +219,18 @@ Depth:  10  s:  0xc000095f78
 - Constants in Go can have upto 256 bits of precision
 - Constants can be either typed or untyped
 - Untyped constant are considered to be of a "kind"
+
+# Data Structures
+- Data Oriented Design
+
+# Caching
+- Cache line: 64 bytes of memory
+![alt text](images/cache-0.jpeg)
+- Caches have pre-fetchers that bring in data into the cache before we need it
+- Arrays: contiguous memory locations
+
+# Translation Lookaside Buffer (TLB)
+- A special cache
+- Where is a virtual address for a process physically located in RAM? - The TLB keeps track of this
+
+> *Note: Row traversals for an array are faster. This is because row-order traversal is traversal along contiguous memory addresses and caching really speeds up this access since caches store coniguous memory chunks*
